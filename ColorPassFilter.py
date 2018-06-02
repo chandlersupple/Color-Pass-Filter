@@ -8,7 +8,7 @@ from PIL import Image
 from urllib2 import urlopen
 
 url = raw_input('Image Url (png, jpg): ')
-color_scale = raw_input('Color Pass Filter (red, blue, green, grey): ')
+color_scale = raw_input('Color Pass Filter (red, blue, green, grey, inverted): ')
 
 url_open = urlopen(url).read()
 img = io.BytesIO(url_open)
@@ -61,6 +61,15 @@ try:
                 break
             for x in range(0, dimensions[0]):
                 color = (0, 0, pix[x,y][2])
+                pygame.draw.rect(master, color, (x, y, 1, 1), 0)
+    if (color_scale == 'inverted'):
+        global pix
+        pix_num = 0
+        for y in range (0, dimensions[1]):
+            if (pix_num >= len(pix_val) - 1):
+                break
+            for x in range(0, dimensions[0]):
+                color = (255 - pix[x,y][0], 255 - pix[x,y][1], 255 - pix[x,y][1])
                 pygame.draw.rect(master, color, (x, y, 1, 1), 0)
 
     while True:
