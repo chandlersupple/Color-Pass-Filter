@@ -1,3 +1,7 @@
+# Chandler Supple, 6/2/2018
+
+# The algorithm may be unresponsive for a few seconds after having initialized depending on the file size.
+
 import io
 import pygame
 from PIL import Image
