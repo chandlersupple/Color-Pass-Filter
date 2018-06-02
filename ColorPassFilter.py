@@ -2,7 +2,7 @@
 
 # The algorithm may be unresponsive for a few seconds after having initialized depending on the file size.
 
-import io
+from io import BytesIO
 import pygame
 from PIL import Image
 from urllib2 import urlopen
