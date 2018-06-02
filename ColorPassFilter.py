@@ -3,7 +3,7 @@ import pygame
 from PIL import Image
 from urllib2 import urlopen
 
-url = raw_input('Maze Url (png, jpg): ')
+url = raw_input('Image Url (png, jpg): ')
 color_scale = raw_input('Color Pass Filter (red, blue, green, grey): ')
 
 url_open = urlopen(url).read()
