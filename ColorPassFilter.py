@@ -1,7 +1,7 @@
 # Chandler Supple, 6/2/2018
 
 # The algorithm may be unresponsive for a few seconds after having initialized depending on the file size.
-# To add, '.jpg' images may not all work due to the PIL library.
+# To add, some '.jpg' images may not work due to the PIL library.
 
 import io
 import pygame
