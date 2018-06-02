@@ -27,7 +27,6 @@ try:
     quit = 0
     
     if (color_scale == 'grey'):
-        global pix
         pix_num = 0
         for y in range (0, dimensions[1]):
             if (pix_num >= len(pix_val) - 1):
@@ -37,7 +36,6 @@ try:
                 color = (sorted(listed_rbg)[2], sorted(listed_rbg)[2], sorted(listed_rbg)[2])
                 pygame.draw.rect(master, color, (x, y, 1, 1), 0)
     if (color_scale == 'red'):
-        global pix
         pix_num = 0
         for y in range (0, dimensions[1]):
             if (pix_num >= len(pix_val) - 1):
@@ -46,7 +44,6 @@ try:
                 color = (pix[x,y][0], 0, 0)
                 pygame.draw.rect(master, color, (x, y, 1, 1), 0)
     if (color_scale == 'green'):
-        global pix
         pix_num = 0
         for y in range (0, dimensions[1]):
             if (pix_num >= len(pix_val) - 1):
@@ -55,7 +52,6 @@ try:
                 color = (0, pix[x,y][1], 0)
                 pygame.draw.rect(master, color, (x, y, 1, 1), 0)
     if (color_scale == 'blue'):
-        global pix
         pix_num = 0
         for y in range (0, dimensions[1]):
             if (pix_num >= len(pix_val) - 1):
@@ -64,7 +60,6 @@ try:
                 color = (0, 0, pix[x,y][2])
                 pygame.draw.rect(master, color, (x, y, 1, 1), 0)
     if (color_scale == 'inverted'):
-        global pix
         pix_num = 0
         for y in range (0, dimensions[1]):
             if (pix_num >= len(pix_val) - 1):
